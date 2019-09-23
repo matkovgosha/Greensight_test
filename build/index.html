@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width"> 
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=36cd3350-d859-492d-9b21-878e9f841947&lang=ru_RU" type="text/javascript"></script>
+    <script src="js/map.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+     <!-- Сетка -->
+     <!--<div class = "debugGrid"> 
+          <div>
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div> -->
+    <main>
+        <div class="wrapper">
+            <h2>Выберите способ доставки</h2>
+            <div class="tab">
+                   <button class="button tablinks arrow-1" onclick="openTab(event, 'Delivery')" id="defaultOpen"><span>Доставка</span></button>
+                  <div class = "right">
+                    <div id = "arrow-1" class="arrow-4">
+                        <span class="arrow-4-left"></span>
+                        <span class="arrow-4-right"></span>
+                    </div> 
+                  </div>
+
+              <button  class="button tablinks button-lg" onclick="openTab(event, 'Pickup')"><span>Самовывоз</span></button>
+            </div>
+
+            <div class="margin-bot"> 
+                <div id="Delivery" class="tabcontent marbot">
+                 <div class= "delivery">
+                  <form id = "form">
+                    <div class="items">
+                        <div class="item">
+                            <label>ФИО</label>
+                            <input class= "FIO" id = "FIO" name="FIO" type = "text" placeholder = "Только кириллица"> 
+                        </div>
+                        <div class="item">
+                            <label>Телефон</label>
+                            <input class= "phone" id = "phone"  name="phone" type="phone" placeholder = "+7 (___) ___-__-__" > 
+                        </div>
+                        <div class="adress">
+                            <label>Адрес доставки</label>
+                            <input class= "adress_input" id = "adress" type = "text" placeholder = "Город, улица, дом"> 
+                        </div>
+                        <div class="comment">
+                            <label>Комментарий</label>
+                            <textarea id = "comment"></textarea> 
+                        </div>
+                    </div>
+                    <button type='submit' class='submitBtn'>
+                       Отправить
+                    </button>
+                  </form>
+                 </div>
+                </div>
+                <div class="tab">
+                  <button class="tablinks arrow-2 button-sm" onclick="openTab(event, 'Pickup')"><span>Самовывоз</span></button>
+                  <div class = "right">
+                      <div id = "arrow-2" class="arrow-4">
+                        <span class="arrow-4-left"></span>
+                        <span class="arrow-4-right"></span>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div id="Pickup" class="tabcontent marginFix">
+              <div class = "destination">
+                <form>
+                    <div class="items">
+                        <div class="item">
+                            <label class="radio">
+                              <input name="dest" type="radio" />
+                              <div class="radio__text">Пункт Выдачи заказов Песчаная улица, дом 13</div>
+                            </label>
+                        </div>
+                        <div class="item">
+                            <label class="radio">
+                              <input name="dest" type="radio" />
+                              <div class="radio__text">Пункт Выдачи заказов Подсосенский переулок, 11</div>
+                            </label>
+                        </div>              
+                  <div class="map" id="map"></div>
+                  </div>
+                 <button>
+                       Отправить
+                  </button>
+                </form>
+              </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
