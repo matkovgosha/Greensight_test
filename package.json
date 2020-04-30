@@ -24,7 +24,7 @@
     "gulp-if": "^2.0.2",
     "gulp-less": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "smart-grid": "^2.1.2"
   }
 }
